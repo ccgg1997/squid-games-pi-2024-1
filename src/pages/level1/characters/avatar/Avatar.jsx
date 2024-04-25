@@ -18,7 +18,7 @@ export default function Avatar() {
     }, [actions, avatar.animation]);
 
     return (
-        <group ref={avatarRef} name="Scene" position-y={-0.65}>
+        <group ref={avatarRef} name="Scene" position-y={-0.65} >
             <group name="Armature">
                 <skinnedMesh
                     name="EyeLeft"

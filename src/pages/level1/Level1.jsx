@@ -20,26 +20,27 @@ export default function Level1() {
     return (
         <KeyboardControls map={map} >
             <Canvas
-                shadows={true}
+                shadows={false}
             >
                 <Perf position="top-left" />
                 <Suspense fallback={null}>
-                    <Lights />
-                    <Environments />
-                    <Physics debug={false}>
-                        <World />
-                        <Girl />
-                        <RedMen />
-                        <Ecctrl
-                            camInitDis={-2}
-                            camMaxDis={-2}
-                            maxVelLimit={5} 
-                            jumpVel={4} 
-                            position={[0,10,0]}
-                        >
-                            <Avatar />
-                        </Ecctrl>
-                    </Physics>
+                    <Lights ></Lights>
+                        {/* <Environments /> */}
+                        <Physics debug={false}>
+                            <World />
+                            <Girl />
+                            <RedMen />
+                            <Ecctrl
+                                camInitDis={-2}
+                                camMaxDis={-2}
+                                maxVelLimit={5} 
+                                jumpVel={4} 
+                                position={[1,10,1]}
+                            >
+                                <Avatar />
+                            </Ecctrl>
+                        </Physics>
+                    
                     <WelcomeText position={[0, 1, -2]} />
                 </Suspense>
                 <Controls />

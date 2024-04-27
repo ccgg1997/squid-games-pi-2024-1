@@ -16,7 +16,7 @@ const Lights = () => {
     return (
         <>
         <ambientLight color={new Color("white")} intensity={0.90} />
-        <directionalLight color={new Color("white")} intensity={0.001} />
+        <directionalLight color={new Color("white")} intensity={0.009} />
         <pointLight
             ref={pointLightRef}
             position={[0, 3, lightZ]}

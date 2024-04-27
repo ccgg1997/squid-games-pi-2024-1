@@ -35,7 +35,9 @@ export default function Level1() {
                                 camMaxDis={-2}
                                 maxVelLimit={5} 
                                 jumpVel={4} 
-                                position={[1,10,1]}
+                                position={[1,10,-10]}
+                                characterInitDir={180}
+                                camInitDir= {{ x: 0, y: 10 }}
                             >
                                 <Avatar />
                             </Ecctrl>

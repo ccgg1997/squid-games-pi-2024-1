@@ -20,11 +20,11 @@ export default function RedManCircle(props) {
     const newAngle = Math.atan2(z, x);
 
     redManCircleRef.current.setNextKinematicTranslation({ 
-      x: props.position[0] + x, 
-      y: props.position[1], 
-      z: props.position[2] + z 
+      x: props.position[0] != null ? props.position[0] + x : x, 
+      y: props.position[1] != null ? props.position[1]:0, 
+      z: props.position[2] != null ? props.position[2] + z : z 
     });
-    redManCircleRef.current.setNextKinematicRotation({ y: -newAngle }); 
+    redManCircleRef.current.setNextKinematicRotation({ y: newAngle }); 
   });
 
   return (
